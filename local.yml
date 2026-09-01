@@ -1,0 +1,11 @@
+# local.yml
+---
+- name: Teste do Ansible Pull
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Criar um arquivo de teste para validar a execucao
+      file:
+        path: /tmp/ansible_pull_teste.txt
+        state: touch
+        mode: '0644'
