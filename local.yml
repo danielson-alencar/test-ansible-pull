@@ -6,6 +6,13 @@
   tasks:
     - name: Criar um arquivo de teste para validar a execucao
       file:
-        path: /tmp/ansible_pull_teste-1.txt
+        path: /tmp/ansible_pull_teste.txt
         state: touch
         mode: '0644'
+
+    # --- NOVA TASK ABAIXO ---
+    - name: Garantir que o pacote htop esta instalado
+      apt:
+        name: htop
+        state: present
+        update_cache: yes
