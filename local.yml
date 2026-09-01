@@ -6,6 +6,6 @@
   tasks:
     - name: Criar um arquivo de teste para validar a execucao
       file:
-        path: /tmp/ansible_pull_teste.txt
+        path: /tmp/ansible_pull_teste-1.txt
         state: touch
         mode: '0644'
